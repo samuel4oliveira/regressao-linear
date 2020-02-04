@@ -1,4 +1,4 @@
-def regressao_linear(x, y, X):
+def regressao_linear(x, y):
    
     somaX = 0.0
     somaY = 0.0
@@ -20,5 +20,8 @@ def regressao_linear(x, y, X):
     #Determinando Beta
     beta = mediaY - alpha * mediaX
 
-    Y = alpha * X + beta
+    #Determinando Y
+    Y = []
+    for i in range(len(x)):
+        Y.append(alpha * x[i] + beta)
     return Y
